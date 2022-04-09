@@ -1,13 +1,15 @@
 import React from 'react';
+import useFirebase from '../../Hooks/useFirebase';
 
 const Login = () => {
+    const {signInWithGoogle} = useFirebase();
     return (
         <div>
             <h3>Login here.</h3>
             <div style={{margin: '20px'}}>
-                <button>Google Sign In</button>
+                <button onClick={signInWithGoogle}>Google Sign In</button>
             </div>
-            
+
             <form>
                 <input type="email" placeholder='your email' />
                 <br />
